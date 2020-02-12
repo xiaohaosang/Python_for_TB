@@ -1,0 +1,6 @@
+行情服务器：TradeDataWork.py(TradeDataWork_multi.py)  
+	   TB将行情数据写入txt，运行TradeDataWork.py(读取行情数据，并记录到数据库，并将行情通过socket发送给StradegyWork(StradeyWork_Noqueue))
+策略运行：StradegyWork(StradeyWork_Noqueue)。
+	StradeyWork_Noqueue：交易指令写在本电脑txt，本地TB运行读取交易指令。
+	StradegyWork：交易指令通过socket，传给TradeOperaWork
+运行指令：TradeOperaWork：StradegyWork将交易指令传给TradeOperaWork，TradeOperaWork将指令写入本地txt, 本地TB运行读取交易指令。
